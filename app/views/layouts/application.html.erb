@@ -14,14 +14,19 @@
 	</div>
 	<div id="columns">
 		<div id="side">
-			<a href="http://www....">Home</a><br />
+		  
+			<a href="http://localhost:3000">Home</a><br />
 			<a href="http://www..../faq">Questions</a><br /> 
 			<a href="http://www..../news">News</a><br />
 			<a href="http://www..../contact">Contact</a><br />
+			<a>Generated at: <%= Time.now %></a><br />
 		</div>
 		<div id="main">
 			<%= yield %>
     	</div>
   	</div>
+ <% if session[:counter] > 0 %>
+ Store has been accessed <%= pluralize(session[:counter], "time") %><br />
+ <% end %>
 </body>
 </html>
