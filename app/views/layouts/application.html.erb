@@ -16,7 +16,7 @@
 		<div id="side">
 		<% if @cart %>  
 		  <%= hidden_div_if(@cart.line_items.empty?, :id => "cart") do  %>
-		  <%= render(@cart) %>
+		    <%= render(@cart) %>
 		  <% end %>
 		<% end %>
 			<a href="http://localhost:3000">Home</a><br />
@@ -27,7 +27,7 @@
 		</div>
 		<div id="main">
 			<%= yield %>
-    	</div>
   	</div>
+  </div>
 </body>
 </html>
